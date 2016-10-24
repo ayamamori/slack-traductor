@@ -1,3 +1,12 @@
+# Fork info
+
+This is fork repository of https://github.com/roman01la/slack-traductor .
+I altered it in terms of:
+
+- Fixed the bug of wrong implementation when the bot receive the slack's system message.
+- Supports two languages in one bot.
+
+
 # slack-traductor
 Slack bot to translate chat messages of any language into specified language
 
@@ -20,7 +29,7 @@ Traductor is using Microsoft Translator API, because it's free 😅
   BOT_TOKEN=slack_bot_token
   CLIENT_ID=microsoft_translator_client_id
   CLIENT_SECRET=microsoft_translator_client_secret
-  TRANSLATE_TO=en
+  TRANSLATE_TO=en,ja
   ADD_MESSAGE=message_to_append
   SUSPEND_TIMEOUT=600000
   ```
@@ -30,6 +39,7 @@ Traductor is using Microsoft Translator API, because it's free 😅
   - CLIENT_ID — take it from your Translator API account
   - CLIENT_SECRET — take it from your Translator API account
   - TRANSLATE_TO — translate messages to specified language, check lang codes in `lib/lang_codes.js`
+    - You can specify one or two language(s). Separate them by a comma.
   - ADD_MESSAGE — specify the message you want to add to every translation, check the screenshot above.
   - SUSPEND_TIMEOUT — the time period in ms while the bot will not translate messages
 
